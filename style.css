@@ -13,20 +13,23 @@ body {
 	overflow: hidden;
   }
   
-  #map1, #map2 {
+  #map1,
+  #map2 {
 	position: absolute;
 	width: 100vw;
 	min-height: 55vw;
 	overflow: hidden;
   }
   
-  #map1 .content-wrap, #map2 .content-wrap {
+  #map1 .content-wrap,
+  #map2 .content-wrap {
 	position: absolute;
 	width: 100vw;
 	min-height: 55vw;
   }
   
-  #map1 .content-body, #map2 .content-body {
+  #map1 .content-body,
+  #map2 .content-body {
 	width: 25%;
 	position: absolute;
 	top: 50%;
@@ -35,7 +38,8 @@ body {
 	color: #fff;
   }
   
-  #map1 img, #map2 img {
+  #map1 img,
+  #map2 img {
 	position: absolute;
 	width: 35%;
 	top: 50%;
@@ -43,17 +47,20 @@ body {
 	transform: translate(-50%, -50%);
   }
   
-  #map1 h1, #map2 h1 {
+  #map1 h1,
+  #map2 h1 {
 	font-size: 2em;
   }
   
   #map1 {
-	background: #222;
+	background: #fffcfc;
 	z-index: 1;
+	transition: background 0.3s;
+	left: 0%;
   }
   
   #map1 .content-body {
-	right: 5%;
+	right: 0;
   }
   
   #map1 h1 {
@@ -61,14 +68,15 @@ body {
   }
   
   #map2 {
-	background: #eee;
+	background: #fffdfd;
 	color: #222;
 	z-index: 2;
+	transition: background 0.3s;
 	width: 50vw;
   }
   
   #map2 .content-body {
-	left: 5%;
+	left: 0;
 	color: #222;
   }
   
@@ -83,26 +91,9 @@ body {
 	z-index: 3;
   }
   
-  .skewed .handle {
-	top: 50%;
-	transform: rotate(30deg) translateY(-50%);
-	height: 200%;
-	transform-origin: top;
-  }
-  
-  .skewed #map2 {
-	transform: skew(-30deg);
-	margin-left: -1000px;
-	width: calc(50vw + 1000px);
-  }
-  
-  .skewed #map2 .content-wrap {
-	transform: skew(30deg);
-	margin-left: 1000px;
-  }
-  
   @media (max-width: 768px) {
 	body {
 	  font-size: 75%;
 	}
-  }  
+  }
+  
